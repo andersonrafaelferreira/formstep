@@ -1,0 +1,51 @@
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<title>Form step</title>
+		
+		<style>
+			input{
+				display: block !important
+			}
+		</style>
+
+
+		
+</head>
+<body>
+
+	
+	<h1>Já tem empresa?</h1>
+	
+		<form name="jaFormOne">
+			<input type="text" name="nome" id="nome" placeholder="nome" required>
+			<input type="text" name="email" id="email" placeholder="e-mail">
+			<input type="text" name="telefone" id="telefone" placeholder="telefone">
+			<input type="submit" value="Solicitar proposta">
+		</form>
+
+		<form name="jaFormTwo">
+			<input type="text" name="cnpj" id="cnpj" placeholder="cnpj" required>
+			<input type="text" name="nomedaempresa" id="nomedaempresa" placeholder="nome da empresa">
+			<input type="text" name="ndeempregados" id="ndeempregados" placeholder="n de empregados">
+			<input type="text" name="faturamentomensal" id="faturamentomensal" placeholder="faturamento mensal">
+			<label for="tipodeinstituicao">Tipo de instituição</label>
+			<select name="" id="tipodeinstituicao">
+				<option value="simples">simples</option>
+				<option value="mei">mei</option>
+				<option value="lucroreal">lucro real</option>
+				<option value="lucropresumido">lucro presumido</option>
+			</select>
+			<input type="button" value="Voltar" id="jaBackStepOne">
+			<input type="submit" value="Enviar">
+		</form>
+	
+		<!-- jQuery library --> 
+		<script src="jquery.min.js"></script> 
+
+		<script src="forms.js"></script>
+
+</body>
+</html>
