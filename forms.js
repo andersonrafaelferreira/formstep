@@ -7,12 +7,12 @@ $().ready(function() {
         $('form[name="jaFormOne"]').hide();
         $('form[name="jaFormTwo"]').show();
         event.preventDefault();
-        alert($('#nome').val() + $('#email').val() + $('#telefone').val())
+        //alert($('#nome').val() + $('#email').val() + $('#telefone').val())
 
-        $.post("", {
+        $.post("https://4pme.com/clientes/labaci/form/api/vaiinserir.php", {
             nome: $('#nome').val(),
-            nome: $('#email').val(),
-            nome: $('#telefone').val(),
+            email: $('#email').val(),
+            telefone: $('#telefone').val(),
         }, function(result){
             console.log(result)
             //$("span").html(result);
