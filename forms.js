@@ -7,9 +7,8 @@ $().ready(function() {
         $('form[name="jaFormOne"]').hide();
         $('form[name="jaFormTwo"]').show();
         event.preventDefault();
-        //alert($('#nome').val() + $('#email').val() + $('#telefone').val())
 
-        $.post("https://4pme.com/clientes/labaci/form/api/vaiinserir.php", {
+        $.post("https://4pme.com/clientes/labaci/form/api/jainserir.php", {
             nome: $('#nome').val(),
             email: $('#email').val(),
             telefone: $('#telefone').val(),
@@ -25,9 +24,32 @@ $().ready(function() {
     });
   
     $('form[name="jaFormTwo"]').submit(function () {
-       alert($('#nome').val() + $('#email').val() + $('#telefone').val())
-       event.preventDefault();
+
+        $.post("https://4pme.com/clientes/labaci/form/api/jainserir.php", {
+            email: $('#email').val(),
+            cnpj: $('#cnpj').val(),
+            nomedaempresa: $('#nomedaempresa').val(),
+            ndeempregados: $('#ndeempregados').val(),
+            faturamentomensal: $('#faturamentomensal').val(),
+            tipodeinstituicao: $('#tipodeinstituicao').val(),
+        }, function(result){
+            console.log(result)
+            //$("span").html(result);
+        });
+
+
+        event.preventDefault();
     });
+
+    function excluir(id, bd){
+        $.post("https://4pme.com/clientes/labaci/form/api/excluir.php", {
+            id: id,
+            bd: bd
+        }, function(result){
+            console.log(result)
+            //$("span").html(result);
+        });
+    };
 
     console.log( "ready!" );
 });
