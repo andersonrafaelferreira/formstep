@@ -20,17 +20,17 @@
 	<h1>Já tem empresa?</h1>
 	
 		<form name="jaFormOne">
-			<input type="text" name="nome" id="nome" placeholder="nome" required>
-			<input type="text" name="email" id="email" placeholder="e-mail">
-			<input type="text" name="telefone" id="telefone" placeholder="telefone">
+			<input type="text" name="nome" id="nome" placeholder="nome" value="ja">
+			<input type="text" name="email" id="email" placeholder="e-mail" required value="ja@ja.com">
+			<input type="text" name="telefone" id="telefone" placeholder="telefone" value="1933334444">
 			<input type="submit" value="Solicitar proposta">
 		</form>
 
 		<form name="jaFormTwo">
-			<input type="text" name="cnpj" id="cnpj" placeholder="cnpj" required>
-			<input type="text" name="nomedaempresa" id="nomedaempresa" placeholder="nome da empresa">
-			<input type="text" name="ndeempregados" id="ndeempregados" placeholder="n de empregados">
-			<input type="text" name="faturamentomensal" id="faturamentomensal" placeholder="faturamento mensal">
+			<input type="text" name="cnpj" id="cnpj" placeholder="cnpj" required value="11.111/00001-22">
+			<input type="text" name="nomedaempresa" id="nomedaempresa" placeholder="nome da empresa" value="ja">
+			<input type="text" name="ndeempregados" id="ndeempregados" placeholder="n de empregados" value="10">
+			<input type="text" name="faturamentomensal" id="faturamentomensal" placeholder="faturamento mensal" value="1000,00">
 			<label for="tipodeinstituicao">Tipo de instituição</label>
 			<select name="" id="tipodeinstituicao">
 				<option value="simples">simples</option>
@@ -40,7 +40,41 @@
 			</select>
 			<input type="button" value="Voltar" id="jaBackStepOne">
 			<input type="submit" value="Enviar">
+			<div id="sucessoJa"></div>
 		</form>
+
+		<hr>
+
+	<h1>Vai abrir empresa?</h1>
+	<form name="vaiFormOne">
+		<input type="text" name="nomeVai" id="nomeVai" placeholder="nome" value="vai">
+			<input type="text" name="emailVai" id="emailVai" placeholder="e-mail" required value="vai@vai.com">
+			<input type="text" name="telefoneVai" id="telefoneVai" placeholder="telefone" value="1988881111">
+			<input type="submit" value="Solicitar proposta">
+	</form>
+
+	<form name="vaiFormTwo">
+		<label for="tipodeempresa">Tipo de empresa</label>
+		<select name="" id="tipodeempresa">
+			<option value="industria">Industria</option>
+			<option value="comercio">Comercio</option>
+			<option value="servico">Serviço</option>
+		</select>
+		<br>
+		<label for="terafuncionarios">Terá funcionários</label>
+		<select name="" id="terafuncionarios">
+			<option value="sim">Sim</option>
+			<option value="nao">Não</option>
+		</select>
+		<br>
+		<input type="text" name="previsaodefaturamento" id="previsaodefaturamento" placeholder="previsao faturamento" value="1000,00">
+		<input type="text" name="ramodeatividade" id="ramodeatividade" placeholder="ramo de atividade" value="Tecnologia">
+		
+		<input type="button" value="Voltar" id="vaiBackStepOne" />
+		<input type="submit" value="Enviar" />
+		<div id="sucessoVai"></div>
+
+	</form>
 	
 		<!-- jQuery library --> 
 		<script src="jquery.min.js"></script> 

@@ -23,7 +23,7 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-$sql = "DELETE FROM '$bd' WHERE id=$id";
+$sql = "DELETE FROM $bd WHERE id=$id";
 
 if ($conn->query($sql) === TRUE) {
     echo "Item excluído com sucesso!";
