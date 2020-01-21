@@ -62,3 +62,22 @@ EshowsController.controller("video", function(
     pageBack.back();
   };
 });
+
+
+
+
+
+
+
+
+
+
+(async function() {
+  let arr = $scope.clientSideList;
+  let arg = $scope.endereco.attributes.address_type;
+
+  console.log(arr, arg);
+
+  const reverse = await arr.filter(item => item.value === arg);
+  $scope.data.clientSide = reverse[0].text;
+})();
