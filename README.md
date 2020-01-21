@@ -81,3 +81,9 @@ EshowsController.controller("video", function(
   const reverse = await arr.filter(item => item.value === arg);
   $scope.data.clientSide = reverse[0].text;
 })();
+
+````
+  $scope.data = {
+    clientSide: $scope.video.platform
+  };
+````
