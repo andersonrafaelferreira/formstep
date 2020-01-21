@@ -167,3 +167,17 @@ EshowsController.controller("endereco", function(
 });
 
 ````
+
+### map
+
+````
+// if (typeof $scope.endereco.attributes.address_type === "object") {
+    //   let { address, complement } = $scope.endereco.attributes;
+    //   let data = {
+    //     address,
+    //     complement,
+    //     address_type: $scope.endereco.attributes.address_type.value
+    //   };
+    //   console.log("test", data);
+    // }
+````
