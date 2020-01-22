@@ -181,3 +181,39 @@ EshowsController.controller("endereco", function(
     //   console.log("test", data);
     // }
 ````
+
+### remove
+
+````
+let videosQuery = `
+  {
+    attractionVideos(
+      attractionId: "7197d768-7f0c-4869-a739-fac00371f4f7"
+    ) {
+      records {
+        description
+        main
+        id
+        title
+        url
+        platform
+      }
+    }
+  }
+`;
+
+
+fetch('https://api.eshows.com.br/g', {
+  method: 'POST',
+  headers: { 'Content-Type': 'application/json' },
+  body: JSON.stringify({ query: '{ videosQuery }' }),
+})
+  .then(res => res.json())
+  .then(res => {
+  console.log(res.data)
+  if(res.errors){
+    console.log(res.errors[0].message)
+  }
+  document.write(JSON.stringify(res))
+});
+````
